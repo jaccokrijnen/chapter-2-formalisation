@@ -12,3 +12,4 @@ src/Passes/Inline/Verification.v
 src/Passes/DeadCode/Specification.v
 src/Passes/DeadCode/Automation.v
 src/Passes/DeadCode/Verification.v
+src/Passes/DeadCode/Examples.v
