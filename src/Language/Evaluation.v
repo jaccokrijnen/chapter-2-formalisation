@@ -151,27 +151,3 @@ Proof.
     eauto using subst_preserves_typing, has_type.
 Qed.
 
-
-
-Theorem subject_reduction : forall e e' T,
-  has_type [] e T ->
-  eval e e' ->
-  has_type [] e' T.
-Proof.
-  intros e e' T Htype Heval.
-  revert T Htype.
-  dependent induction Heval; intros T Htype.
-  - assumption.
-  - assumption.
-  - (* E_App *)
-    inversion Htype. subst.
-    specialize (IHHeval1 _ H2). clear H2.
-    inversion IHHeval1. subst.
-    eauto using subst_preserves_typing.
-  - (* E_Plus *)
-    inversion Htype. subst.
-    eauto using has_type.
-  - (* E_Let *)
-  inversion Htype. subst.
-  eauto using subst_preserves_typing.
-Qed.
