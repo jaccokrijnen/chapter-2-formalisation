@@ -164,10 +164,15 @@ Qed.
 
 
 Lemma dead_code_correct : forall p q,
+  has_type [] p program_ty ->
+  has_type [] q program_ty ->
   dead_code p q ->
   p ≃ q.
 Proof.
-  intros p q H_dc H_ty_p H_ty_q n m.
+  intros p q H_ty_p H_ty_q H_dc.
+  split; try assumption.
+  split; try assumption.
+  intros n m.
   assert (H_DC_Apply : dead_code (Apply p (Const n)) (Apply q (Const n))).
     { apply DC_Apply; eauto using dead_code_refl. }
   split.

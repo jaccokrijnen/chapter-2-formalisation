@@ -7,8 +7,8 @@ From Methodology Require Import
 .
 
 Definition eq_obs p q :=
-  has_type [] p program_ty ->
-  has_type [] q program_ty ->
+  has_type [] p program_ty /\
+  has_type [] q program_ty /\
   (forall n m,
     eval (Apply p (Const n)) (Const m) <->
     eval (Apply q (Const n)) (Const m)
