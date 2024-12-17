@@ -1,0 +1,28 @@
+CoqMakefile.conf
+
+# coq
+*.vo
+*.vok
+*.vos
+*.glob
+*.aux
+*.lia.cache
+*.CoqMakefile.d
+Makefile.coq
+Makefile.coq.conf
+.Makefile.coq.d
+*.crashcoqide
+
+# vim
+*.swp
+
+# vscode
+.vscode/
+
+# haskell
+dist-newstyle/
+
+#intellij
+.idea/
+
+examples/plutus-use-cases

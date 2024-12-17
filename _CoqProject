@@ -1,0 +1,14 @@
+-Q src Methodology
+
+src/Language/Typing.v
+src/Language/Syntax.v
+src/Language/Util.v
+src/Language/Evaluation.v
+src/Language/ObservationalEquivalence.v
+src/Language/Scoping.v
+src/Passes/Inline/Specification.v
+src/Passes/Inline/Automation.v
+src/Passes/Inline/Verification.v
+src/Passes/DeadCode/Specification.v
+src/Passes/DeadCode/Automation.v
+src/Passes/DeadCode/Verification.v
